@@ -60,23 +60,25 @@
 		<!-- Example row of columns -->
 		<hr>
 		<div class="form-group">
+			<form action="searchControll.jsp" method="post">
+				<div class="select_type">
+					<div>
+						<label> 검색조건 : </label> <select name="condition">
+							<option value="player">선수로 검색</option>
+							<option value="team">구단으로 검색</option>
+							<option value="stadium">구장으로 검색</option>
 
-			<div class="select_type">
-				<div>
-					<label> 검색조건 : </label>
-					<form action="searchControll" method="post">
-						<select name="condition">
-							<option value="player_input">선수로 검색</option>
-							<option value="team_input">구단으로 검색</option>
-							<option value="stadium_input">구장으로 검색</option>
-							
 						</select>
-					</form>
+					</div>
 				</div>
-			</div>
-			<label> 검색어 입력 </label> <input type="text" class="form-control">
+				<label> 검색어 입력 </label>
+				<div class="form-group">
+					<input type="text" class="form-control" name = "inputText">
+				</div>
+				<button type="submit" class="btn btn-success">검색</button>
+			</form>
 		</div>
-		<button type="button" class="btn btn-success">검색</button>
+
 		<footer> </footer>
 	</div>
 	<!-- /container -->
